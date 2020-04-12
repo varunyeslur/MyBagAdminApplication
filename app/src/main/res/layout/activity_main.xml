@@ -28,12 +28,11 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:hint="Admin name"
+        android:hint="User name"
         android:inputType="textPassword"
         android:textColor="#FFFFFF"
-        android:textColorHint="#ffffff"
+        android:textColorHint="#363636"
         android:textSize="17sp"
-        android:textStyle="bold"
         />
 
     <EditText
@@ -49,9 +48,9 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:textColor="#ffffff"
-        android:textColorHint="#ffffff"
+        android:textColorHint="#363636"
         android:textSize="17sp"
-        android:textStyle="bold"
+
         />
 
 
@@ -68,6 +67,7 @@
         android:layout_marginTop="27dp"
         android:background="@drawable/adminlogin_button"
         android:padding="20dp"
+        android:textAlignment="center"
         android:text="LOG IN"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"

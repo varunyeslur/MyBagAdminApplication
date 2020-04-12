@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "Admin Successfully Logged in", Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
 
-                            Intent intent = new Intent(MainActivity.this, AdminAddNewProductActivity.class);
+                            Intent intent = new Intent(MainActivity.this, AdminCategoryActivity.class);
                             startActivity(intent);
 
                         }
