@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFCFF"
+    tools:context=".AdminProductActivity">
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+
+        android:src="@drawable/imageupload"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        />
+
+    <EditText
+        android:id="@+id/product_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_image"
+        android:padding="20dp"
+        android:background="@drawable/inputs"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:hint="Product Name"
+        android:inputType="textImeMultiLine"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/product_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_Name"
+        android:padding="20dp"
+        android:background="@drawable/inputs"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:hint="Product Description"
+        android:inputType="textImeMultiLine"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/product_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_description"
+        android:padding="20dp"
+        android:background="@drawable/inputs"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:hint="Product price"
+        android:inputType="textImeMultiLine"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        />
+
+    <Button
+
+        android:id="@+id/add_new_procuct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_price"
+        android:text="Add Procuct"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/adminlogin_button"
+
+        />
+
+
+</RelativeLayout>

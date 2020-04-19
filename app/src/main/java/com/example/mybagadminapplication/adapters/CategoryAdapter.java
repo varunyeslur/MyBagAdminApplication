@@ -2,6 +2,7 @@ package com.example.mybagadminapplication.adapters;
 
 import android.content.Context;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mybagadminapplication.AdminCategoryActivity;
+import com.example.mybagadminapplication.AdminProductActivity;
 import com.example.mybagadminapplication.Model.Category;
 import com.example.mybagadminapplication.R;
 
@@ -46,24 +49,36 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.viewHo
 
     @Override
     public void onBindViewHolder(viewHolder holder, final int position) {
-       Category category=temp_text.get(position);
+       final Category category=temp_text.get(position);
         holder.iv_dp.setImageResource(category.getDp());
         holder.tvName.setText(category.getName());
-        
+
+        holder.root.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context,AdminProductActivity.class).putExtra("category",category.getName()));
+            }
+        });
     }
 
    
 
-    class viewHolder extends RecyclerView.ViewHolder {
+    class viewHolder extends RecyclerView.ViewHolder
+    {
         TextView tvName;
         ImageView iv_dp;
+        View root;
 
-        viewHolder(final View itemview) {
+        viewHolder(final View itemview)
+        {
             super(itemview);
 
             tvName = (TextView) itemview.findViewById(R.id.tv_name);
-
             iv_dp = itemview.findViewById(R.id.iv_dp);
+            root=itemview.findViewById(R.id.lt_root);
+
+
+
         }
     }
 
